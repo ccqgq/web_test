@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<package name="basicstruts2" extends="struts-default" namespace="/">
+		<global-results>
+			<result name="login">/login/Login.jsp</result>
+		</global-results>
+		<action name="user_*" class="com.qgq.user.web.action.UserAction" method="{1}">
+			<result name="login_success">/login/home.jsp</result>
+			<result name="loginINPUT">/login/Login.jsp</result>
+			<result name="list_success">/user/list.jsp</result>
+			<result name="add_success" type="redirectAction">user_list</result>
+			<result name="addINPUT">/user/add.jsp</result>
+			<result name="select_success">/user/list.jsp</result>
+			<result name="delete_success" type="redirectAction">user_list</result>
+			<result name="findone_success">/user/view.jsp</result>
+			<result name="updatefind_success">/user/edit.jsp</result>
+		</action>
+	</package>
+
+</struts>
