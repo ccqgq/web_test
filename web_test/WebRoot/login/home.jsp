@@ -6,6 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+    frameset {border:0px;}
+    frame {border:0px;}
+</style>
 </head>
 <frameset rows="15%,*,10%">
 	<frame src="top.jsp" noresize="noresize">
